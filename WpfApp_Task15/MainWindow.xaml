@@ -1,0 +1,400 @@
+﻿<Window x:Class="WpfApp_Task15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Task15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900" MinWidth="450">
+    <Window.Resources>
+        <Style TargetType="Paragraph">
+            <Style.Setters>
+                <Setter Property="TextAlignment" Value="Justify"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Padding" Value="3"/>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="Border">
+            <Style.Setters>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="Image">
+            <Style.Setters>
+                <Setter Property="MaxWidth" Value="600"/>
+                <Setter Property="MinWidth" Value="300"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="quote" TargetType="Paragraph">
+            <Style.Setters>
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="FontStyle" Value="Italic"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="Background" Value="LightGray"/>
+                <Setter Property="Margin" Value="0,50"/>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="Paragraph" x:Key="Header1">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="Verdana"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="Paragraph" x:Key="Header2" BasedOn="{StaticResource Header1}">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="Helvetica"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextAlignment" Value="Left"/>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <FlowDocumentScrollViewer>
+            <FlowDocument FontFamily="Verdana">
+                <Paragraph>
+                    <Floater Width="800" HorizontalAlignment="Stretch">
+                        <BlockUIContainer>
+                            <Image Source="Data/1.jpg"/>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+                <Paragraph Style="{StaticResource Header1}">
+                    Дом в Подмосковье с исчезающими стенами
+                </Paragraph>
+                <Section FontSize="16">
+                    <Paragraph>
+                        <Hyperlink NavigateUri="https://www.forumhouse.ru/journal/articles/10407-dom-v-podmoskove-s-ischezayushchimi-stenami">История</Hyperlink> сбывшейся мечты семьи экстравертов.
+                    </Paragraph>
+                    <Paragraph>
+                        Содержание:
+                    </Paragraph>
+                    <List MarkerStyle="Square">
+                        <ListItem>
+                            <Paragraph>Ощущение личного комфорта</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>Воплощая мечты</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>Первый этаж</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>Второй этаж</Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="*"/>
+                        <TableColumn Width="*"/>
+                        <TableColumn Width="*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Я так хотела дом, что собрала целую подборку референсов. В прошлом году мы посмотрели, наверное, 15 объектов, и у меня сформировался отчетливый образ моего будущего жилья, я точно знала, чего хочу и чего не хочу, — рассказывает Наталья, хозяйка большого стильного дома в Подмосковье. — Мне были нужны панорамные окна, но точно не был нужен второй свет, это был бы перебор. Я хотела участок в лесу или рядом с лесом и водоем неподалеку. Когда я мечтала, я думала, так не бывает, оказалось — бывает. Этот дом — словно с картинки в моем воображении».
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/2.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph Style="{StaticResource Header2}">
+                                    Ощущение личного комфорта
+                                </Paragraph>
+                                <Paragraph >
+                                    Дом, который купила Наталья, как будто специально разработан по ее заказу чутким и понимающим архитектором. Здесь все так, как нужно:
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/3.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    "Закрытым людям, интровертам, возможно, было бы дискомфортно от этого обилия стекла. Мы открытые, экстраверты, поэтому чувствуем себя отлично. В общем, раздумывая, использовать ли в доме панорамное остекление, нужно исходить из личного ощущения комфорта."
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph>
+                                    Кстати, на личное ощущение комфорта Натальи «работает» даже локация коттеджа. Он расположен в тихом красивом месте в окружении деревьев и при этом — всего в 8 километрах от МКАД. Это важно: в доме живут люди, у которых в Москве интересная работа и активная социальная жизнь. Бизнес Натальи — кухни NOLTE в Москве: «Естественно, я заказала нашу кухню и себе: хочу, чтобы у меня был современный, функциональный дом», — рассказывает она.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph Style="{StaticResource Header2}">
+                                    Воплощая мечты
+                                </Paragraph>
+                                <Paragraph >
+                                    Это первый дом Натальи, раньше ее семья всегда жила в квартире. Потом дети выросли, исчезла привязанность молодых родителей к детским садикам, школам, кружкам и секциям. Настало время осуществить давнюю мечту о жизни на природе, с собакой, кошкой, запахом жасмина, с цветами, йогой на верхней террасе, барбекю и долгими посиделками на нижней.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Это работает просто, — говорит Наталья. — Если не мечтать о доме, просто сидя на диване, а ездить и смотреть, четко понимая, чего ты хочешь, то обязательно найдешь свой, тот самый».
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/4.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph >
+                                    Площадь дома — 362 квадратных метра (без террас, но включая все подсобные помещения). Это проект в стиле хай-тек, с минималистичной архитектурой: строгие линии без лишних украшательств, сдержанные, но хорошо подобранные цвета. Фасад отделан термососной и натуральным сланцем. У дома эксплуатируемая плоская кровля с аэродинамическими свесами, две террасы. Однако главная его особенность — обилие светопрозрачных конструкций, которые дают ощущение невесомости.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph Style="{StaticResource Header2}">
+                                    Первый этаж
+                                </Paragraph>
+                                <Paragraph >
+                                    «У нас весь первый этаж в панорамных окнах, глухие — только стена, которая будет отдана под TV-зону, а также стена, у которой разместится кухня. Все продумано очень толково: если я сижу в центре комнаты, то вижу, что происходит справа и слева от дома, перед ним… Пространство за домом тоже можно увидеть из этой точки, если встать», — рассказывает Наталья.
+                                </Paragraph>
+                                <Paragraph >
+                                    На первом этаже есть гардеробная, подсобное помещение с газовым котлом и другим инженерным оборудованием, комната, с назначением которой пока не определились: или кабинет, или гостевая — в ней предусмотрен отдельный санузел. Еще один санузел примыкает к большому открытому пространству первого этажа, которое объединяет гостиную, столовую и кухню. Стол длиной 190 см будет легко раздвигаться до 240 см для больших компаний.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/5.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Пространство легко зонировать большим диваном: в комнате с двух сторон панорамные окна, — поясняет хозяйка. — С одной стороны они глухие, то есть не открываются. А вот с противоположной стороны установлен портал: поворачиваешь ручку, створка отъезжает, как у шкафа-купе, и прозрачной стены будто и вовсе не было».
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph >
+                                    Портал, разделяющий дом и сад, представляет собой подъемно-раздвижную конструкцию размером 6370х3000 мм. Створки с двухкамерными стеклопакетами толщиной 54 мм сдвигаются параллельно стене, не занимая полезное пространство помещения. В профилях предусмотрены термомосты из полиамида и уплотнители из каучуковой резины — конструкции не продуваются и не промерзают. В любую погоду портал открывается легко, его створки скользят по направляющим шинам, как горячий нож в масле. Здесь дело еще и в современной фурнитуре, которая превращает эксплуатацию панорамных конструкций в удовольствие: достаточно приложить небольшое усилие, чтобы массивная створка пришла в движение.
+                                </Paragraph>
+                                <Paragraph >
+                                    Панорамные окна, установленные в доме Натальи на первом этаже, — тоже внушительных габаритов.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «У нас высота первого этажа от пола до потолка — 3 м, и окна там во всю высоту», — рассказывает хозяйка.
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/6.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph >
+                                    Для панорамного остекления домагероини применялись профильные системы «АЛЮТЕХ» из алюминия. Этот прочный материал вне конкуренции, когда речь идет о больших площадях. Даже узкие изящные профили выдерживают тяжелые стеклопакеты. К примеру, в системе, которая использовалась на объекте для глухого панорамного остекления, видимая ширина профиля — всего 50 мм.
+                                </Paragraph>
+                                <Paragraph >
+                                    Выбирают алюминиевые конструкции также из соображений экономии: из-за устойчивости к коррозии и ультрафиолету они служат по 50 лет и дольше. Еще одно преимущество металла — экологичность. Алюминий — материал природного происхождения, который не выделяет вредных веществ при эксплуатации.
+                                </Paragraph>
+                                <Paragraph >
+                                    Единственное, что могло бы смутить Наталью, — высокая теплопроводность крылатого металла, но эта проблема у ответственных производителей давно решена. Окна с рамами из алюминия ничуть не холоднее деревянных, зато долговечнее. Так,производитель в конструкциях окон и порталов использует «теплый» профиль со вставкой из полиамида, а также термоизоляторы и уплотнители, которые исключают риск промерзания и продувания.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph >
+                                    Неотъемлемая часть конструкций —  стеклопакеты (чем они толще, тем лучше окна защищают от шума с улицы). Алюминиевые профили «АЛЮТЕХ» позволяют устанавливать заполнение толщиной до 58 мм. Вкупе с уплотнителями и вспененными вставками они помогают поддерживать в комнатах комфортный уровень шума.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/7.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Алюминиевые панорамные окна удобны и практичны, просто нужно все продумать, — говорит Наталья. — У нас теплый пол и теплый потолок, плюс в самих оконных системах есть решения, которые обеспечивают отсутствие конденсата. Кроме того, в доме предусмотрены радиаторы отопления, которые мы можем регулировать: или включать только пол или только радиаторы, или то и другое, но на минимум, создавая нужную „погоду“».
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph >
+                                    Рассуждая о том, насколько в доме с панорамным остеклением безопасно, Наталья отмечает: «Если грабитель захочет, он попадет в любое помещение. Стекла это или кирпич, маленькое окно или большое — разницы я не вижу».
+                                </Paragraph>
+                                <Paragraph>
+                                    Если верить полицейской статистике, в 50% случаев воры проникают в загородные дома именно через окна, причем, не разбивая стеклопакет, а отогнув профиль. Но это стандартное окно грабитель сможет взломать за 15-20 секунд: с современными панорамными конструкциями из прочного алюминия, да еще с противовзломной фурнитурой, он, скорее всего, просто не станет даже и связываться.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph Style="{StaticResource Header2}">
+                                    Второй этаж
+                                </Paragraph>
+                                <Paragraph >
+                                    На второй этаж дома ведет изящная винтовая лестница, бетонная, отделанная белой плиткой. «Мы поставим вдоль нее прозрачные перила, чтобы усилить ощущение воздушности», — рассказывает Наталья.
+                                </Paragraph>
+                                <Paragraph >
+                                    Здесь запланирован рабочий кабинет, но это открытая зона, без стен.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Там же будет стоять диван. Когда появятся внуки, они будут тут смотреть мультики: и вроде под присмотром, и нам не мешают. Работать я собираюсь только в будние дни, когда в доме будет тихо. Из помещения, которое я определила себе под кабинет, открывается очень красивый вид. И площадку перед домом видно, а если посмотреть прямо, увидишь террасу», — делится героиня.
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/8.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph >
+                                    На террасу ведут стильные прозрачные двери с высотой порога всего 20 мм, которые стирают границы между помещениями. Там будут стоять цветы и диванчик для отдыха. В большое окно плоской крыши днем льется свет, а ночью в него можно смотреть на звезды. Именно о такой террасе мечтала Наталья: открытой и одновременно защищенной от осадков и ветра. Открытость и защищенность — пожалуй, эти два слова лучше всего описывают философию ее дома. Границы с ландшафтом как будто намечены пунктиром: они как бы есть и их как бы нет…
+                                </Paragraph>
+                                <Paragraph>
+                                    «Одна из четырех стен на втором этаже стеклянная полностью, от пола до потолка, и это смотрится очень интересно, — рассказывает хозяйка. — Там есть фрамуга, которую можно открыть вбок или вверх. Мне нравится, что можно не включать кондиционер: открыл окно, и у тебя в доме свежий воздух и пахнет лесом».
+                                </Paragraph>
+                                <Paragraph>
+                                    Вид на верхнюю террасу открывается также через французское окно в ванной комнате, еще одно панорамное окно в этом помещении выходит на лес.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/9.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Это шикарно, ты как будто бы лежишь в ванне на природе. Ванная — мое любимое место в доме», — улыбается Наталья.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph>
+                                    Во всех окнах этого дома используется фурнитура со скрытыми петлями. С одной стороны, это дает максимальную герметичность, с другой — у конструкций современный вид, не перегруженный лишними деталями.
+                                </Paragraph>
+                                <Paragraph>
+                                    Рассказывая об окнах, Наталья отмечает необычный серо-черный цвет, в который были окрашены профили.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Это особенный оттенок. Графит, как у карандаша, только потемнее и не блестит. То, что нужно!».
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/10.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph>
+                                    Причем, внешний вид оконных конструкций «АЛЮТЕХ» с годами не портится и не меняется: профили красят только на заводе и только порошковыми материалами от мировых производителей. Заказчик может выбирать тип покрытия (глянцевое, матовое или муар) и любой из цветов по каталогу RAL (а их в нем — более 200). К тому же производитель может декорировать профили под дерево или анодировать, подчеркивая фактуру металла.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="2" Padding="10" >
+                                <Paragraph>
+                                    <Floater Width="600" HorizontalAlignment="Stretch">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/11.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource quote}">
+                                    «Главное, справиться с обслуживанием дома, но над этим мы работаем»,— подводит итог разговора Наталья.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell ColumnSpan="3">
+                                <Paragraph>
+                                    Она убеждена, что огромные окна, порталы и террасные двери не будут нуждаться в особом уходе, тем более, что для второго этажа уже куплен робот-мойщик окон. Все конструкции смонтированы правильно, поэтому регулировать их не придется. А к царапинам, сколам и механическим повреждениям алюминиевые профили вполне устойчивы.
+                                </Paragraph>
+                                <Paragraph>
+                                    …Сейчас семья Натальи «наводит в доме марафет», покупает мебель и заодно — выбирает собаку. До переезда, которого вся семья ждет с нетерпением, осталось совсем немного. И правильно, ведь мечты должны сбываться!</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
